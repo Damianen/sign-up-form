@@ -35,20 +35,39 @@
                 <form>
                     <div class="form-main">
                         <label id="form-title">Let's do this!</label>
-                        <label for="first_name">First Name:</label>
-                        <input type="text" id="first_name" name="first_name">
-                        <label for="last_name">Last Name:</label>
-                        <input type="text" id="last_name" name="last_name">
-                        <label for="email">E-mail Address:</label>
-                        <input type="email" id="email" name="email">
-                        <label for="phone_number">Phone Number:</label>
-                        <input type="tel" id="phone_number" name="phone_number">
-                        <label for="user_password">Password:</label>
-                        <input type="password" id="user_password" name="user_password">
-                        <label for="c_password">Confirm Password:</label>
-                        <input type="password" id="c_password" name="c_password">
+                        <div class="input-pair">
+                            <div class="form-input">
+                                <label for="first_name">FIRST NAME</label>
+                                <input type="text" id="first_name" name="first_name" minlength="1" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="last_name">LAST NAME</label>
+                                <input type="text" id="last_name" name="last_name" minlength="1" required>
+                            </div>
+                        </div>
+                        <div class="input-pair">
+                            <div class="form-input">
+                                <label for="email">E-MAIL ADDRESS</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="phone_number">PHONE NUMBER</label>
+                                <input type="tel" id="phone_number" name="phone_number" required>
+                            </div>
+                        </div>
+                        <div class="input-pair">
+                            <div class="form-input">
+                                <label for="user_password">PASSWORD</label>
+                                <input type="password" id="user_password" name="user_password" minlength="5" required>
+                                <p class="error-text"></p>
+                            </div>
+                            <div class="form-input">
+                                <label for="c_password">CONFIRM PASSWORD</label>
+                                <input type="password" id="c_password" name="c_password" minlength="5" required>
+                            </div>
+                        </div>
                     </div>
-                    <button type="submit">Create Account</button>
+                    <button type="submit" id="submit-button">Create Account</button>
                 </form>
             </div>
             <p class="login">
@@ -56,5 +75,6 @@
             </p>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
